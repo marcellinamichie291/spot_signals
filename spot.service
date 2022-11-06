@@ -6,11 +6,9 @@ After=network.target
 User=user_name
 Group=user_name
 
-WorkingDirectory=/home/user_name/public_results/
-Environment="PYTHONPATH=/home/user_name/public_results/"
-ExecStart=/home/user_name/public_results/venv/bin/python /home/user_name/public_results/tg.py
+WorkingDirectory=/home/user_name/spot_signals/
+Environment="PYTHONPATH=/home/user_name/spot_signals/"
+ExecStart=/home/user_name/spot_signals/venv/bin/python /home/user_name/spot_signals/scan.py
 
 [Install]
 WantedBy=multi-user.target
-
-sudo cp /home/user_name/delete_vip/delete.service /etc/systemd/system/delete.service
