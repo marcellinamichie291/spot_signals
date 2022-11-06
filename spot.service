@@ -1,0 +1,16 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=user_name
+Group=user_name
+
+WorkingDirectory=/home/user_name/public_results/
+Environment="PYTHONPATH=/home/user_name/public_results/"
+ExecStart=/home/user_name/public_results/venv/bin/python /home/user_name/public_results/tg.py
+
+[Install]
+WantedBy=multi-user.target
+
+sudo cp /home/user_name/delete_vip/delete.service /etc/systemd/system/delete.service
